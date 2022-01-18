@@ -6,8 +6,9 @@ pipeline {
 
     stages {
         stage('git clone'){
+            steps{
             git credentialsId: '9b782c00-9158-4034-b88b-b57390a5eda0', url: 'git@github.com:jiangdeping/jenkins-mvn.git'
-
+            }
     }
 
         stage('Build'){
