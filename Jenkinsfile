@@ -3,10 +3,13 @@ pipeline {
     tools {
         maven 'mvn-3.5.4'
     }
-    triggers {
-        git credentialsId: '9b782c00-9158-4034-b88b-b57390a5eda0', url: 'git@github.com:jiangdeping/jenkins-mvn.git'
-    }
+
     stages {
+        stage('git clone'){
+            git credentialsId: '9b782c00-9158-4034-b88b-b57390a5eda0', url: 'git@github.com:jiangdeping/jenkins-mvn.git'
+
+    }
+
         stage('Build'){
             steps{
              //   sh "mvn clean package spring-boot:repackage"
