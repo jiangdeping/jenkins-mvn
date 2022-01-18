@@ -8,6 +8,7 @@ pipeline {
             steps{
              //   sh "mvn clean package spring-boot:repackage"
                 sh "printenv" //将环境变量打印到console中
+                echo "Running $env.BULID_NUMBER on $env.JENKINS_URL"
                 }
         }
     }
